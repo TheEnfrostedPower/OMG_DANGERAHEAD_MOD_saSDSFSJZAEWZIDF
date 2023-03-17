@@ -3,6 +3,7 @@
 ---------------------------------
 --Initiation
 loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/OMG_DANGERAHEAD_MOD_saSDSFSJZAEWZIDF/main/Init.lua"))()
+game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
     --Entities
     local Depth = false
     spawn(function() --Depth
