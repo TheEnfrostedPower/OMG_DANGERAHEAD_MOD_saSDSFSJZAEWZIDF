@@ -10,7 +10,7 @@ end)
 camShake:Start()
 local killed = false
 local function Move()
-	local val = 150
+	local val = 300
 	local Reboundspeed = 0.5
 	local ReboundDelay = 1
 	local storer = Reboundspeed
@@ -65,7 +65,7 @@ local function Move()
 						firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {"You died to Depth...","He's served to spawn in the early rooms!","Try to avoid him!"},"Blue")
 					game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Depth"
 					wait(.5)
-					game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):TakeDamage(90)
+					game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):TakeDamage(50)
 					
 					for i,v in pairs(entity:GetDescendants()) do
 						if v:IsA("Sound") then
