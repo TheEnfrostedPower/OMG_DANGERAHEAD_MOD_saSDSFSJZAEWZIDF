@@ -20,7 +20,6 @@ function ReplaceGitAu(GithubSnd,SoundName)
 		end
 		return (getcustomasset or getsynasset)(SoundName..".mp3")
 	end
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 ---------------------------------
 --Initiation
 loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/OMG_DANGERAHEAD_MOD_saSDSFSJZAEWZIDF/main/Init.lua"))()
