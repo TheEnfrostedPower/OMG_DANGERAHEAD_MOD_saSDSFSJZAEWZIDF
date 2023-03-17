@@ -9,8 +9,8 @@ camShake:Start()
 local killed = false
 local function Move()
 	local val = 130
-	local Reboundspeed = .5
-	local ReboundDelay = .5
+	local Reboundspeed = .9
+	local ReboundDelay = .9
 	local storer = Reboundspeed
 	local entityheight = Vector3.new(0,2,0)
 
@@ -31,7 +31,7 @@ local function Move()
 	---------------------MOVEMENTS
 	local gruh = workspace.CurrentRooms
 	--for i = 1,6 do
-	
+
 	local function canSeeTarget(target,size)
 		if killed == true then
 			return
@@ -60,7 +60,7 @@ local function Move()
 			if v.Character ~= nil and not v.Character:GetAttribute("Hiding") then
 				if canSeeTarget(v.Character,175) then
 					--ReboundMoving:Stop()
-					loadstring(game:HttpGet("https://raw.githubusercontent.com/XTRINT0/EntityLoads/main/MatcherScream"))()
+					--loadstring(game:HttpGet("https://raw.githubusercontent.com/XTRINT0/EntityLoads/main/MatcherScream"))()
 					game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Matcher"
 					wait(.5)
 					game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):TakeDamage(100)
@@ -80,21 +80,21 @@ local function Move()
 			end
 		end
 	end)
-	
+
 
 	entity.Anchored = true
-	for i = game.ReplicatedStorage.GameData.LatestRoom.Value+1,0 do
+	for i = game.ReplicatedStorage.GameData.LatestRoom.Value+1,0,-1 do
 		if gruh:FindFirstChild(i) then
 			print("room "..i)
 			local room = gruh[i]
 			--if room:FindFirstChild("Nodes") then
-				local RoomStart = room:FindFirstChild("RoomEntrance")
-				local RoomEnd = room:FindFirstChild("RoomExit")
-				if RoomEnd then
-					Reboundspeed = storer
-					game.TweenService:Create(entity,TweenInfo.new(Reboundspeed,Enum.EasingStyle.Cubic,Enum.EasingDirection.Out),{CFrame = RoomStart.CFrame + entityheight}):Play()
-					wait(ReboundDelay)
-				end
+			local RoomStart = room:FindFirstChild("RoomEntrance")
+			local RoomEnd = room:FindFirstChild("RoomExit")
+			if RoomEnd then
+				Reboundspeed = storer
+				game.TweenService:Create(entity,TweenInfo.new(Reboundspeed,Enum.EasingStyle.Cubic,Enum.EasingDirection.Out),{CFrame = RoomStart.CFrame + entityheight}):Play()
+				wait(ReboundDelay)
+			end
 			--end
 		end
 		print("looping")
