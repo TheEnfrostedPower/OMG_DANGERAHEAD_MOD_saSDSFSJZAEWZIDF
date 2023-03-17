@@ -19,8 +19,6 @@ function ReplaceGitAu(GithubSnd,SoundName)
 		return (getcustomasset or getsynasset)(SoundName..".mp3")
 	end
 
-game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
-
 --DOORS Danger Ahead Script
 --Execute on shop!
 firesignal(game.ReplicatedStorage.EntityInfo.Caption.OnClientEvent, "@".. game.Players.LocalPlayer.Name .." Is authorized.")
