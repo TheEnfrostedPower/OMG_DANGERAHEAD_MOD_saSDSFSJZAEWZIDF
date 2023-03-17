@@ -1,4 +1,6 @@
-                local events = require(game.ReplicatedStorage.ClientModules.Module_Events)
+task.wait(.50222222)
+
+local events = require(game.ReplicatedStorage.ClientModules.Module_Events)
 local cameraShaker = require(game.ReplicatedStorage.CameraShaker)
 local camera = workspace.CurrentCamera
 
