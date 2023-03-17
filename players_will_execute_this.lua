@@ -31,3 +31,15 @@ Silence = false
 end
 end
 end)
+local Backtrack = false
+spawn(function()
+        while true do
+            if Backtrack == false then
+                Backtrack = true
+                wait(290)
+                game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/OMG_DANGERAHEAD_MOD_saSDSFSJZAEWZIDF/main/Backtrack.lua"))()
+                Backtrack = false
+                end
+            end
+        end)
