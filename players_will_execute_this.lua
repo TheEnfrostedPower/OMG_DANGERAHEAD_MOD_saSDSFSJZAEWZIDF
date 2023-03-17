@@ -30,7 +30,7 @@ game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
         while true do
             if Depth == false then
                 Depth = true
-                wait(50)
+                wait(110)
                 game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/OMG_DANGERAHEAD_MOD_saSDSFSJZAEWZIDF/main/Depth.lua"))()
 Depth = false
@@ -42,7 +42,7 @@ local Silence = false
      while true do
          if Silence == false then
              Silence = true
-             wait(120)
+             wait(200)
              game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
              wait(.25)
              loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/OMG_DANGERAHEAD_MOD_saSDSFSJZAEWZIDF/main/Silence.lua"))()
@@ -57,7 +57,7 @@ spawn(function()
         while true do
             if Backtrack == false then
                 Backtrack = true
-                wait(290)
+                wait(400)
                 game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/OMG_DANGERAHEAD_MOD_saSDSFSJZAEWZIDF/main/Backtrack.lua"))()
                 Backtrack = false
