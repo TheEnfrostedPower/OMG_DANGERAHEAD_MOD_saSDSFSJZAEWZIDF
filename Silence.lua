@@ -21,7 +21,7 @@ local function GrabGithubModel(ModelUrl,ModelName)
 end
 
 
-local Createor = game:GetObjects("rbxassetid://12814580534")[1]
+local Createor = game:GetObjects("rbxassetid://12815685295")[1]
 Createor.Parent = workspace
 local entity = Createor.RushNew
 entity.CFrame = ChosenRoom.RoomEntrance.CFrame * CFrame.new(0,-1,-10)
