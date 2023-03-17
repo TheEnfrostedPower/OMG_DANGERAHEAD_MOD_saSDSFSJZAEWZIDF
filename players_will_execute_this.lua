@@ -1,5 +1,26 @@
 --DOORS Floor 2 Mode Mod
 --Execute at pre-run shop.
+if game:GetService("ReplicatedStorage").GameData.LatestRoom.Value ~= 0 then
+	firesignal(game:GetService("ReplicatedStorage").EntityInfo.DeathHint.OnClientEvent,{"Oh.. Hello!","It seems that.. Guiding light doesn't want to tell you on why this happened!","Anyways.. What did you die to?","Oh, I Figured... You executed the script after A-0000! I mean.. Door 0?","Well anyways, Remember this"},"Yellow")
+	task.wait(.2)
+	game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid"):TakeDamage(500)
+end
+
+if game.Workspace:FindFirstChild("endlessdoors") then
+	firesignal(game:GetService("ReplicatedStorage").EntityInfo.Caption.OnClientEvent,"Fired Twice(2x); Returning..")
+	return
+end
+local Verif = Instance.new("WorldModel",workspace)
+Verif.Name = "endlessdoors"
+
+function ReplaceGitAu(GithubSnd,SoundName)
+		local url=GithubSnd
+		if not isfile(SoundName..".mp3") then
+			writefile(SoundName..".mp3", game:HttpGet(url))
+		end
+		return (getcustomasset or getsynasset)(SoundName..".mp3")
+	end
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
 ---------------------------------
 --Initiation
 loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/OMG_DANGERAHEAD_MOD_saSDSFSJZAEWZIDF/main/Init.lua"))()
