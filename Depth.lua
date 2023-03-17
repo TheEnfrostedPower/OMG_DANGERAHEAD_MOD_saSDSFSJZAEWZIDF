@@ -16,7 +16,7 @@ local function Move()
 	local storer = Reboundspeed
 	local entityheight = Vector3.new(0,2,0)
 
-	local s= game:GetObjects("rbxassetid://12815673576")[1]
+	local s= game:GetObjects("rbxassetid://12815721490")[1]
 	s.Parent = workspace
 	local entity = s.Matcher
 	entity.CanCollide = false
