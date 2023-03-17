@@ -64,3 +64,15 @@ spawn(function()
                 end
             end
         end)
+local Fester = false
+spawn(function()
+        while true do
+            if Fester == false then
+                Fester = true
+                wait(300)
+                game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/OMG_DANGERAHEAD_MOD_saSDSFSJZAEWZIDF/main/Fester.lua"))()
+                Fester = false
+                end
+            end
+        end)
