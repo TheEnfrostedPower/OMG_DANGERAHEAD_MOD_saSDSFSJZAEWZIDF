@@ -85,6 +85,20 @@ if not workspace:FindFirstChild("ojrect") then
         clonethe:PivotTo(LobbyRoom.PrimaryPart.CFrame)
     end
 end
+    local gruhh = game.Workspace.CurrentRooms
+ local room = gruhh:FindFirstChild("0")
+ if room then
+     room.Assets.Fireplace.Fireplace_Poker:Destroy()
+     room.Assets.Fireplace.Fence:Destroy()
+     room.Assets.Fireplace.Base:Destroy()
+     room.Assets.Fireplace.Marble:Destroy()
+     room.Assets.Fireplace.Marble:Destroy()
+     room.Assets.Fireplace.Marble:Destroy()
+     room.Assets.Fireplace.Stone:Destroy()
+     room.Assets.Fireplace.Stone:Destroy()
+     room.Assets.Fireplace.Stone:Destroy()
+     room.Assets.Fireplace.Stone:Destroy()
+     end
 -- Bright Game (90 and Above)
 if game.ReplicatedStorage.GameData.LatestRoom.Value > 90 then
 	if not _G.FullBrightExecuted then
@@ -238,6 +252,38 @@ game.Players.LocalPlayer.PlayerGui.MainUI.Statistics.Frame["Floors Escaped"].Tex
         v:Destroy()
   end
 end
+    for i,v in pairs(workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Assets:GetDescendants()) do
+  if v.Name == "Chandelier" then
+        v:Destroy()
+  end
+end
+spawn(function()
+    local idvers = "rbxassetid://12673434222"
+local gruhh = game.Workspace.CurrentRooms
+
+for i,v in pairs(gruhh:GetDescendants()) do
+    if v:IsA("BasePart") then
+        if v.Name == "LightFixture" then
+            local GrabbedStand = v
+            local getBraber = game:GetObjects("rbxassetid://12673434222")[1]
+            getBraber.Parent = GrabbedStand
+            getBraber:PivotTo(v.CFrame)
+        end
+    end
+end
+
+game.Workspace.CurrentRooms.DescendantAdded:Connect(function(v)
+    task.wait(.3)
+    if v:IsA("BasePart") then
+        if v.Name == "LightFixture" then
+            local GrabbedStand = v
+            local getBraber = game:GetObjects("rbxassetid://12673434222")[1]
+            getBraber.Parent = GrabbedStand
+            getBraber:PivotTo(v.CFrame)
+        end
+    end
+end)
+end)		
 	local roomdoor = game.Workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Door.Door
 		roomdoor.Material = "DiamondPlate"
 		roomdoor.Color = Color3.fromRGB(100, 100, 100)
