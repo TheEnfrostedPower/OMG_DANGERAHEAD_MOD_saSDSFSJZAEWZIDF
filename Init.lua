@@ -307,7 +307,7 @@ end)
         end
     end
 end)
-		
+		local CurrentRoom = 100
 	local roomdoor = game.Workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Door.Door
 		roomdoor.Material = "DiamondPlate"
 		roomdoor.Color = Color3.fromRGB(100, 100, 100)
