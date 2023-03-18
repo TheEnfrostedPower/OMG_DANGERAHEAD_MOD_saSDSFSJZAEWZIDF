@@ -328,3 +328,6 @@ end)
 	        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 15
 	        end
 	end)
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
+		local CurrentRoom = CurrentRoom + 1
+		end)
