@@ -70,6 +70,21 @@ if LightFixtures then
   game.Workspace.CurrentRooms["0"].Assets:FindFirstChild("Luggage_Cart_Crouch"):Destroy()
   wait(0.1)
     game.Workspace.CurrentRooms["0"].Assets:FindFirstChild("Wall_Clock"):Destroy()
+if not workspace:FindFirstChild("ojrect") then
+    local okreject = Instance.new("BoolValue",workspace)
+    okreject.Name = "ojrect"
+
+    local idvers = "rbxassetid://12816209913"
+    local gruhh = game.Workspace.CurrentRooms
+
+    local LobbyRoom = gruhh:FindFirstChild("0")
+
+    if LobbyRoom then
+        local clonethe = game:GetObjects(idvers)[1]
+        clonethe.Parent = LobbyRoom
+        clonethe:PivotTo(LobbyRoom.PrimaryPart.CFrame)
+    end
+end
 -- Bright Game (90 and Above)
 if game.ReplicatedStorage.GameData.LatestRoom.Value > 90 then
 	if not _G.FullBrightExecuted then
