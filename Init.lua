@@ -55,7 +55,21 @@ while task.wait(0.00005) do
 	game.Lighting.FogStart = "10"
 end
 ]]
-
+game.Workspace.CurrentRooms["0"].Assets:FindFirstChild("Chandelier"):Destroy()
+wait(0.3)
+game.Workspace.CurrentRooms["0"].Assets:FindFirstChild("Chandelier"):Destroy()
+wait(0.1)
+local LightFixtures = game.Workspace.CurrentRooms["0"].Assets:FindFirstChild("Light_Fixtures")
+if LightFixtures then
+   LightFixtures:Destroy()
+  end
+ game.Workspace.CurrentRooms["0"].Parts:FindFirstChild("Key_Holder"):Destroy()
+ wait(0.3)
+  game.Workspace.CurrentRooms["0"].Parts:FindFirstChild("Key_Holder"):Destroy()
+  wait(0.1)
+  game.Workspace.CurrentRooms["0"].Assets:FindFirstChild("Luggage_Cart_Crouch"):Destroy()
+  wait(0.1)
+    game.Workspace.CurrentRooms["0"].Assets:FindFirstChild("Wall_Clock"):Destroy()
 -- Bright Game (90 and Above)
 if game.ReplicatedStorage.GameData.LatestRoom.Value > 90 then
 	if not _G.FullBrightExecuted then
