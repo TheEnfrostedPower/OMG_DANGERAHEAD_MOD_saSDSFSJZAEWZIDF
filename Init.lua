@@ -257,33 +257,6 @@ end
         v:Destroy()
   end
 end
-spawn(function()
-    local idvers = "rbxassetid://12673434222"
-local gruhh = game.Workspace.CurrentRooms
-
-for i,v in pairs(gruhh:GetDescendants()) do
-    if v:IsA("BasePart") then
-        if v.Name == "LightFixture" then
-            local GrabbedStand = v
-            local getBraber = game:GetObjects("rbxassetid://12673434222")[1]
-            getBraber.Parent = GrabbedStand
-            getBraber:PivotTo(v.CFrame)
-        end
-    end
-end
-
-game.Workspace.CurrentRooms.DescendantAdded:Connect(function(v)
-    task.wait(.3)
-    if v:IsA("BasePart") then
-        if v.Name == "LightFixture" then
-            local GrabbedStand = v
-            local getBraber = game:GetObjects("rbxassetid://12673434222")[1]
-            getBraber.Parent = GrabbedStand
-            getBraber:PivotTo(v.CFrame)
-        end
-    end
-end)
-end)		
 	local roomdoor = game.Workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Door.Door
 		roomdoor.Material = "DiamondPlate"
 		roomdoor.Color = Color3.fromRGB(100, 100, 100)
