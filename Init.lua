@@ -308,6 +308,19 @@ end)
         end
     end
 end)
+		game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
+    for i,v in pairs(game:GetService("Workspace").CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Assets:GetChildren()) do
+        if v:IsA("Model") then
+            if v.Name == "Bookcase" then
+                local IdVerse = game:GetObjects("rbxassetid://12826469053")[1]
+                IdVerse.Parent = v.Parent
+                IdVerse:PivotTo(v.PrimaryPart.CFrame)
+                IdVerse.Name = "NEW_CASE"
+                v:Destroy()
+            end
+        end
+    end
+end)
 	local roomdoor = game.Workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Door.Door
 		roomdoor.Material = "DiamondPlate"
 		roomdoor.Color = Color3.fromRGB(100, 100, 100)
