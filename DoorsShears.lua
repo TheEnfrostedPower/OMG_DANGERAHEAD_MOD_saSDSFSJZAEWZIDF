@@ -257,4 +257,13 @@ end
 FullVersion()
 end
         end)
+end
+if room then
+    local Rock = room:FindFirstChild("RockyRouter")
+    Rock.Vines.Board2:Destroy()
+    Rock.Vines.Board1.Part.InteractPrompt.Triggered:Connect(function()
+        Rock.Vines.Board1.Sound:Play()
+        wait(0.2)
+        Rock.Vines:Destroy()
+        end)
     end
