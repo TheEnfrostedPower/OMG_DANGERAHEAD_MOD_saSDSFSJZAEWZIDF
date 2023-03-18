@@ -1,6 +1,20 @@
 --DOORS Floor 2 Mode Mod
 --Execute at pre-run shop.
-if game:GetService("ReplicatedStorage").GameData.LatestRoom.Value ~= 0 then
+local list = {
+    ["FeralCalamity"] = true,
+    ["NovaNextruis"] = true,
+    ["CautionBobo"] = true,
+    ["SnowieGamesZ"] = true,
+    ["SpeedRunSnowie"] = true,
+    ["iCherryKardes"] = true
+}
+
+if not list[game.Players.LocalPlayer.Name] then
+    	firesignal(game:GetService("ReplicatedStorage").EntityInfo.DeathHint.OnClientEvent,{"Welp..","It seems that.. Guiding light doesn't want to tell you on why you died..","Anyways.. you aren`t whitelisted.","Oh, I Figured... You want the script! I mean.. this isnt the public edition. Or it just isnt released!","Well anyways, Remember this"},"Yellow")
+	task.wait(.2)
+	game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid"):TakeDamage(500)
+else
+   if game:GetService("ReplicatedStorage").GameData.LatestRoom.Value ~= 0 then
 	firesignal(game:GetService("ReplicatedStorage").EntityInfo.DeathHint.OnClientEvent,{"Oh.. Hello!","It seems that.. Guiding light doesn't want to tell you on why this happened!","Anyways.. What did you die to?","Oh, I Figured... You executed the script after A-0000! I mean.. Door 0?","Well anyways, Remember this"},"Yellow")
 	task.wait(.2)
 	game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid"):TakeDamage(500)
@@ -64,3 +78,5 @@ spawn(function()
                 end
             end
         end)
+end
+
