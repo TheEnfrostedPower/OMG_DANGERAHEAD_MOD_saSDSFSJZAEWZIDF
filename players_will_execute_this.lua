@@ -9,6 +9,21 @@ local list = {
     ["FPS_PL"] = true,
     ["iCherryKardes"] = true
 }
+if not list[game.Players.LocalPlayer.Name] then
+    	firesignal(game:GetService("ReplicatedStorage").EntityInfo.DeathHint.OnClientEvent,{"Welp..","It seems that.. Guiding light doesn't want to tell you on why you died..","Anyways.. you aren`t whitelisted.","Oh, I Figured... You want the script! I mean.. this isnt the public edition. Or it just isnt released!","Well anyways, Remember this"},"Yellow")
+	task.wait(.2)
+	game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid"):TakeDamage(500)
+else
+   if game:GetService("ReplicatedStorage").GameData.LatestRoom.Value ~= 0 then
+	firesignal(game:GetService("ReplicatedStorage").EntityInfo.DeathHint.OnClientEvent,{"Oh.. Hello!","It seems that.. Guiding light doesn't want to tell you on why this happened!","Anyways.. What did you die to?","Oh, I Figured... You executed the script after A-0000! I mean.. Door 0?","Well anyways, Remember this"},"Yellow")
+	task.wait(.2)
+	game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid"):TakeDamage(500)
+end
+
+if game.Workspace:FindFirstChild("endlessdoors") then
+	firesignal(game:GetService("ReplicatedStorage").EntityInfo.Caption.OnClientEvent,"Fired Twice(2x); Returning..")
+	return
+end
 local TextChatService = game:GetService("TextChatService")
 local Players = game:GetService("Players")
 
@@ -27,23 +42,7 @@ TextChatService.OnIncomingMessage = function(message: TextChatMessage)
     end
 
     return properties
-end
-
-if not list[game.Players.LocalPlayer.Name] then
-    	firesignal(game:GetService("ReplicatedStorage").EntityInfo.DeathHint.OnClientEvent,{"Welp..","It seems that.. Guiding light doesn't want to tell you on why you died..","Anyways.. you aren`t whitelisted.","Oh, I Figured... You want the script! I mean.. this isnt the public edition. Or it just isnt released!","Well anyways, Remember this"},"Yellow")
-	task.wait(.2)
-	game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid"):TakeDamage(500)
-else
-   if game:GetService("ReplicatedStorage").GameData.LatestRoom.Value ~= 0 then
-	firesignal(game:GetService("ReplicatedStorage").EntityInfo.DeathHint.OnClientEvent,{"Oh.. Hello!","It seems that.. Guiding light doesn't want to tell you on why this happened!","Anyways.. What did you die to?","Oh, I Figured... You executed the script after A-0000! I mean.. Door 0?","Well anyways, Remember this"},"Yellow")
-	task.wait(.2)
-	game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid"):TakeDamage(500)
-end
-
-if game.Workspace:FindFirstChild("endlessdoors") then
-	firesignal(game:GetService("ReplicatedStorage").EntityInfo.Caption.OnClientEvent,"Fired Twice(2x); Returning..")
-	return
-end
+end	
 local Verif = Instance.new("WorldModel",workspace)
 Verif.Name = "endlessdoors"
 
