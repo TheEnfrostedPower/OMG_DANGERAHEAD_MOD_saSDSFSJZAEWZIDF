@@ -238,19 +238,18 @@ end
         v:Destroy()
   end
 end
-		game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
-    for i,v in pairs(game:GetService("Workspace").CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Assets:GetChildren()) do
-        if v:IsA("Model") then
-            if v.Name == "Window" then
-                local IdVerse = game:GetObjects("rbxassetid://12817203782")[1]
-                IdVerse.Parent = v.Parent
-                IdVerse:PivotTo(v.PrimaryPart.CFrame)
-                v:Destroy()
+    for i,v in pairs(game:GetService("Workspace").CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Assets:GetDescendants()) do
+        local findwindfolder = v:FindFirstChild("Windows")
+            
+            if v:IsA("Model") then
+                if v.Name == "Window" then
+                    local IdVerse = game:GetObjects("rbxassetid://12817203782")[1]
+                    IdVerse.Parent = v.Parent
+                    IdVerse:PivotTo(v.PrimaryPart.CFrame)
+                    v:Destroy()
             end
         end
     end
-end)
-		game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
     for i,v in pairs(game:GetService("Workspace").CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Assets:GetChildren()) do
         if v:IsA("Model") then
             if v.Name == "Potted_Plant" then
@@ -261,7 +260,6 @@ end)
             end
         end
     end
-end)
 
 -- Room Setup (Loop)
 --while task.wait(0.000005) do
@@ -283,14 +281,16 @@ end
         v:Destroy()
   end
 end
-		game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
-    for i,v in pairs(game:GetService("Workspace").CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Assets:GetChildren()) do
-        if v:IsA("Model") then
-            if v.Name == "Window" then
-                local IdVerse = game:GetObjects("rbxassetid://12817203782")[1]
-                IdVerse.Parent = v.Parent
-                IdVerse:PivotTo(v.PrimaryPart.CFrame)
-                v:Destroy()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
+    for i,v in pairs(game:GetService("Workspace").CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Assets:GetDescendants()) do
+        local findwindfolder = v:FindFirstChild("Windows")
+            
+            if v:IsA("Model") then
+                if v.Name == "Window" then
+                    local IdVerse = game:GetObjects("rbxassetid://12817203782")[1]
+                    IdVerse.Parent = v.Parent
+                    IdVerse:PivotTo(v.PrimaryPart.CFrame)
+                    v:Destroy()
             end
         end
     end
