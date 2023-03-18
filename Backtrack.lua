@@ -61,10 +61,10 @@ local function Move()
 				if canSeeTarget(v.Character,175) then
 					--ReboundMoving:Stop()
 					--loadstring(game:HttpGet("https://raw.githubusercontent.com/XTRINT0/EntityLoads/main/MatcherScream"))()
-					game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Matcher"
+					game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Backtrack"
 					wait(.5)
 					game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):TakeDamage(100)
-					--firesignal(game.ReplicatedStorage.Bricks.DeathHint.OnClientEvent, {"You died to matcher..","His presence is known for Blinking the lights or Breaking all the lights..","When he does this, Hide immediately!"})
+					firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {"You died to Backtrack.","He likes to go in front of the rooms up ahead of you!","Be sure to watch out!"},"Blue")
 					for i,v in pairs(entity:GetDescendants()) do
 						if v:IsA("Sound") then
 							v:Stop()
