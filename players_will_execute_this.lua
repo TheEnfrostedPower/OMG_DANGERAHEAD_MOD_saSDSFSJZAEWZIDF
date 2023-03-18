@@ -6,6 +6,7 @@ local list = {
     ["CautionBobo"] = true,
     ["SnowieGamesZ"] = true,
     ["SpeedRunSnowie"] = true,
+    ["FPS_PL"] = true,
     ["iCherryKardes"] = true
 }
 
