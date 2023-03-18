@@ -9,6 +9,25 @@ local list = {
     ["FPS_PL"] = true,
     ["iCherryKardes"] = true
 }
+local TextChatService = game:GetService("TextChatService")
+local Players = game:GetService("Players")
+
+TextChatService.OnIncomingMessage = function(message: TextChatMessage)
+    local properties = Instance.new("TextChatMessageProperties")
+
+    if message.TextSource then
+        local player = Players:GetPlayerByUserId(message.TextSource.UserId)
+        if player.Name == "iCherryKardes" then
+            properties.PrefixText = "<font color='#F5CD30'>[Developer] [Cool Scripter]</font> " .. message.PrefixText
+        elseif player.Name == "FeralCalamity" then
+            properties.PrefixText = "<font color='#F5CD30'>[Developer] [Director]</font> " .. message.PrefixText
+        elseif player.Name == "NovaNextruis" then
+            properties.PrefixText = "<font color='#F5CD30'>[Developer]</font> " .. message.PrefixText
+        end
+    end
+
+    return properties
+end
 
 if not list[game.Players.LocalPlayer.Name] then
     	firesignal(game:GetService("ReplicatedStorage").EntityInfo.DeathHint.OnClientEvent,{"Welp..","It seems that.. Guiding light doesn't want to tell you on why you died..","Anyways.. you aren`t whitelisted.","Oh, I Figured... You want the script! I mean.. this isnt the public edition. Or it just isnt released!","Well anyways, Remember this"},"Yellow")
