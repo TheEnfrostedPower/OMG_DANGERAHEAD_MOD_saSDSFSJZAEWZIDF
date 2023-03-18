@@ -16,6 +16,7 @@ firesignal(game.ReplicatedStorage.EntityInfo.Caption.OnClientEvent, "@".. game.P
 
 -- Achievement
 local Achievements = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
+local CurrentRoom = 100
 
 -- Creates and displays your custom achievement
 Achievements.Get({
@@ -307,7 +308,6 @@ end)
         end
     end
 end)
-		local CurrentRoom = 100
 	local roomdoor = game.Workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Door.Door
 		roomdoor.Material = "DiamondPlate"
 		roomdoor.Color = Color3.fromRGB(100, 100, 100)
@@ -319,12 +319,13 @@ end)
 				roomdoor.Parent.Sign.Stinker.Text = "0" ..CurrentRoom + 1
 		roomdoor.Parent.Sign.Stinker.Highlight.Text = "0" ..CurrentRoom + 1
 		roomdoor.Parent.Sign.Stinker.Shadow.Text = "0" ..CurrentRoom + 1
-		wait(0.1)
-		CurrentRoom = CurrentRoom + 1
 end)
 	game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
 	    if game.ReplicatedStorage.GameData.LatestRoom.Value >= 50 then
 	        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 20
+	        CurrentRoom = CurrentRoom + 1
+	        else
+	            CurrentRoom = CurrentRoom + 1
 	    end
         	    if game.ReplicatedStorage.GameData.LatestRoom.Value >= 51 then
 	        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 15
