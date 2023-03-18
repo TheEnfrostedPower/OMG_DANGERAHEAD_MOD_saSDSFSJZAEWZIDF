@@ -316,6 +316,9 @@ end)
 		game.Lighting.FogEnd = 75
 		game.Lighting.FogStart = 10
 		roomdoor.Open.SoundId = "rbxassetid://3908308607"
+				roomdoor.Parent.Sign.Stinker.Text = "0" ..CurrentRoom + 1
+		roomdoor.Parent.Sign.Stinker.Highlight.Text = "0" ..CurrentRoom + 1
+		roomdoor.Parent.Sign.Stinker.Shadow.Text = "0" ..CurrentRoom + 1
 end)
 	game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
 	    if game.ReplicatedStorage.GameData.LatestRoom.Value >= 50 then
