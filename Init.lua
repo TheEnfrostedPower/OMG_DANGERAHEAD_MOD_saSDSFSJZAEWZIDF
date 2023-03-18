@@ -319,6 +319,8 @@ end)
 				roomdoor.Parent.Sign.Stinker.Text = "0" ..CurrentRoom + 1
 		roomdoor.Parent.Sign.Stinker.Highlight.Text = "0" ..CurrentRoom + 1
 		roomdoor.Parent.Sign.Stinker.Shadow.Text = "0" ..CurrentRoom + 1
+		wait(0.1)
+		CurrentRoom = CurrentRoom + 1
 end)
 	game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
 	    if game.ReplicatedStorage.GameData.LatestRoom.Value >= 50 then
@@ -328,6 +330,3 @@ end)
 	        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 15
 	        end
 	end)
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
-		local CurrentRoom = CurrentRoom + 1
-		end)
