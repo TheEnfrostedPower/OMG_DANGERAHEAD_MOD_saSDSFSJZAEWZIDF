@@ -99,6 +99,7 @@ end
      room.Assets.Fireplace.Stone:Destroy()
      room.Assets.Fireplace.Stone:Destroy()
      end
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/OMG_DANGERAHEAD_MOD_saSDSFSJZAEWZIDF/main/DoorsShears.lua"))()
 -- Bright Game (90 and Above)
 if game.ReplicatedStorage.GameData.LatestRoom.Value > 90 then
 	if not _G.FullBrightExecuted then
