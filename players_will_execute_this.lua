@@ -22,6 +22,7 @@ function ReplaceGitAu(GithubSnd,SoundName)
 	end
 ---------------------------------
 --Initiation
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/OMG_DANGERAHEAD_MOD_saSDSFSJZAEWZIDF/main/DoorsShears.lua"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/OMG_DANGERAHEAD_MOD_saSDSFSJZAEWZIDF/main/Init.lua"))()
 game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
     --Entities
