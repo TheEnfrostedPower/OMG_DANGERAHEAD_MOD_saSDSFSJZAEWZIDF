@@ -7,7 +7,8 @@ local list1 = {
     ["SpeedRunSnowie"] = true,
     ["FPS_PL"] = true,
     ["Salabajter"] = true,
-    ["iCherryKardes"] = true
+    ["iCherryKardes"] = true,
+    ["NovaNextruis"] = true
 }
 if not list1[game.Players.LocalPlayer.Name] then
     	firesignal(game:GetService("ReplicatedStorage").EntityInfo.DeathHint.OnClientEvent,{"Welp..","It seems that.. Guiding light doesn't want to tell you on why you died..","Anyways.. you aren`t whitelisted.","Oh, I Figured... You want the script! I mean.. this isnt the public edition. Or it just isnt released!","Well anyways, Remember this"},"Yellow")
