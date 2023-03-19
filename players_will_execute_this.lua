@@ -18,7 +18,7 @@ else
 	local list2 = {
     ["NovaNextruis"] = true
 }
-if not list2[game.Players.LocalPlayer.Name] then
+if list2[game.Players.LocalPlayer.Name] then
     	firesignal(game:GetService("ReplicatedStorage").EntityInfo.DeathHint.OnClientEvent,{"Welp..","It seems that.. Guiding light is dissapointed in you.","Anyways.. i`m pretty sure this is a bug.","Oh, I Figured... Just try again. I mean.. the bug probably wont happen again. If it does, dont contact the devs. This is not their fault!","Well anyways, Remember this...."},"Yellow")
 	task.wait(.2)
 	game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid"):TakeDamage(500)
