@@ -71,7 +71,7 @@ task.spawn(function()
 			game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Rattle"
 			firesignal(game:GetService("ReplicatedStorage").EntityInfo.DeathHint.OnClientEvent,{"You died to Rattle..","He likes to catch you off-guard when you open a door.","If you think hes nearby, wait until you suspect hes gone!"},"Blue")
 			wait(.7)
-			game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):TakeDamage(100)
+			game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):TakeDamage(50)
 		end
 	end)
 	wait(7)
