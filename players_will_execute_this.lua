@@ -2,7 +2,6 @@
 --Execute at pre-run shop.
 local list = {
     ["FeralCalamity"] = true,
-    ["NovaNextruis"] = true,
     ["CautionBobo"] = true,
     ["SnowieGamesZ"] = true,
     ["SpeedRunSnowie"] = true,
