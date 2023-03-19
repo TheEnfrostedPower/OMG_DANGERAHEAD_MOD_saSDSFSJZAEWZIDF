@@ -7,6 +7,7 @@ local list = {
     ["SnowieGamesZ"] = true,
     ["SpeedRunSnowie"] = true,
     ["FPS_PL"] = true,
+    ["Salabajter"] = true,
     ["iCherryKardes"] = true
 }
 if not list[game.Players.LocalPlayer.Name] then
