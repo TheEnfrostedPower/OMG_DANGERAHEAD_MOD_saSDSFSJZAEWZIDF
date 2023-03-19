@@ -8,7 +8,6 @@ local list1 = {
     ["FPS_PL"] = true,
     ["Salabajter"] = true,
     ["iCherryKardes"] = true,
-    ["Luke_fil"] = true,
     ["NovaNextruis"] = true
 }
 if not list1[game.Players.LocalPlayer.Name] then
