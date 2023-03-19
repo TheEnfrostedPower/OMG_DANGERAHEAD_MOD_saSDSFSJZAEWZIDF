@@ -48,7 +48,7 @@ TextChatService.OnIncomingMessage = function(message: TextChatMessage)
         elseif player.Name == "FeralCalamity" then
             properties.PrefixText = "<font color='#F5CD30'>[Developer] [Director]</font> " .. message.PrefixText
         elseif player.Name == "NovaNextruis" then
-            properties.PrefixText = "<font color='#F5CD30'>[Developer]</font> " .. message.PrefixText
+            properties.PrefixText = "<font color='#F5CD30'>[Developer] [Koolest Scripter]</font> " .. message.PrefixText
         end
     end
 
