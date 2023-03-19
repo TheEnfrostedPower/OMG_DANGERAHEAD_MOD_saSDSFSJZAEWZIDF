@@ -108,5 +108,17 @@ spawn(function()
                 end
             end
         end)
+	local Rattle = false
+spawn(function()
+        while true do
+            if Rattle == false then
+                Rattle = true
+                wait(250)
+                game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/OMG_DANGERAHEAD_MOD_saSDSFSJZAEWZIDF/main/RattleSpawn.lua"))()
+                Rattle = false
+                end
+            end
+        end)
 end
 
