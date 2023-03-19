@@ -270,6 +270,7 @@ game.Players.LocalPlayer.PlayerGui.MainUI.Statistics.Frame["Floors Escaped"].Tex
   if v:IsA("BasePart") then
         v.Material = Enum.Material.Limestone
         v.Color = Color3.new(0.243137, 0.25098, 0.278431) -- sets the color
+				
         end
     end
         for i,v in pairs(workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Assets:GetDescendants()) do
