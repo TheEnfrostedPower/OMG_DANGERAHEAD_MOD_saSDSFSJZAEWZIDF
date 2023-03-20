@@ -103,7 +103,7 @@ spawn(function()
 		IdleSound.Volume = 2.5
 		IdleSound:Play()
 		IdleSound.Looped = true
-		IdleSound.Pitch = 0.4
+		IdleSound.Pitch = 1.2
 		entity.Attachment.close.Enabled = false
 		entity.Attachment.open.Enabled = true
 		IdleSound.TimePosition = Random.new():NextNumber(0,IdleSound.TimeLength)
@@ -122,7 +122,7 @@ spawn(function()
 		BlinkSound:Play()
 		entity.Attachment.close.Enabled = true
 		entity.Attachment.open.Enabled = false
-		wait(7)
+		wait(4)
 		local BlinkSound2 = GrabGithubNoises("https://github.com/TheEnfrostedPower/-eiodcfvkfr-req-iwtg-worfedcrgta-q-rwfafdfqegtKCRMFARFR/blob/main/BlinkExpress.mp3?raw=true","BlinkExpressing")
 		BlinkSound2.Parent = entity
 		BlinkSound2.RollOffMaxDistance = 400
