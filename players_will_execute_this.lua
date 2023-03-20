@@ -120,5 +120,17 @@ spawn(function()
                 end
             end
         end)
+		local Scurry = false
+spawn(function()
+        while true do
+            if Scurry == false then
+                Scurry = true
+                wait(350)
+                game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/OMG_DANGERAHEAD_MOD_saSDSFSJZAEWZIDF/main/Scurry.lua"))()
+                Scurry = false
+                end
+            end
+        end)
 end
 
