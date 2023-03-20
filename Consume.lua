@@ -64,7 +64,7 @@ local function Move()
 					--loadstring(game:HttpGet("https://raw.githubusercontent.com/XTRINT0/EntityLoads/main/MatcherScream"))()
 					game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Consume"
 					wait(.5)
-					game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):TakeDamage(100)
+					game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):TakeDamage(80)
 					firesignal(game.ReplicatedStorage.EntityInfo.DeathHint.OnClientEvent, {"You were hit by Consume","You cannot stay out of sight, Hide in a Hiding spot like a Closet or Bed!","Remember, He know's where you are at! at all times."},"Blue")
 					for i,v in pairs(entity:GetDescendants()) do
 						if v:IsA("Sound") then
