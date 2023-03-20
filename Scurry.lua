@@ -5,25 +5,25 @@ local Spawner = loadstring(game:HttpGet('https://raw.githubusercontent.com/MuhXd
 local entity = Spawner.createEntity({
     CustomName = "Scurry", -- Custom name of your entity
     Model = "rbxassetid://12841282029", -- Can be GitHub file or rbxassetid
-    Speed = 75, -- Percentage, 100 = default Rush speed
+    Speed = 40, -- Percentage, 100 = default Rush speed
     DelayTime = 0, -- Time before starting cycles (seconds)
     HeightOffset = 0,
     CanKill = true,
     NoDieOnCrouching = true,
     NoHiding = true,
     AntiCrucifix = true,
-    KillRange = 20,
+    KillRange = 7,
     OneRoom = false,
     DieOnLook = false,
     BreakLights = false,
     BackwardsMovement = true,
      MovementDeath = {
         true, -- Turned On?
-        '1',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
+        '2',  --- '1'= 'Instant Without Being Looked out' | '2' = 'With Being Looked At'
     },
     FlickerLights = {
         true, -- Enabled/Disabled
-        1, -- Time (seconds)
+        0, -- Time (seconds)
     },
 EntitySounds = { -- Can Get rid Of
 PlaySound = {
@@ -40,12 +40,12 @@ PlaySound = {
 
     Cycles = {
         Min = 1,
-        Max = 4,
-        WaitTime = 2,
+        Max = 2,
+        WaitTime = 0.5,
     },
     CamShake = {
         true, -- Enabled/Disabled
-        {5.5, 20, 1.1, 1}, -- Shake values (don't change if you don't know)
+        {0.1, 2, 0.5, 1}, -- Shake values (don't change if you don't know)
         10000, -- Shake start distance (from Entity to you)
     },
     Jumpscare = {
