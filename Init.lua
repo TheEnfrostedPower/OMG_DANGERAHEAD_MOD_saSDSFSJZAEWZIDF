@@ -217,8 +217,8 @@ end
 --game.Lighting.Ambient = Color3.new(0, 0, 0)
 game.Lighting.Caves.Enabled = true
 game.Lighting.Bloom.Enabled = true
-game.Lighting.FogEnd = "75"
-game.Lighting.FogStart = "10"
+game.Lighting.FogEnd = 75
+game.Lighting.FogStart = 10
 
 --[[ Figure Room Setup (50)
 if game.ReplicatedStorage.GameData.LatestRoom.Value == 50 then
