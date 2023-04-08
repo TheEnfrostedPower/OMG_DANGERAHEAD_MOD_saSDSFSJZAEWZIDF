@@ -37,7 +37,7 @@ function ReplaceGitAu(GithubSnd,SoundName)
         return (getcustomasset or getsynasset)(SoundName..".mp3")
     end
 
-local ReplaceSeekSong = ReplaceGitAu("https://raw.githubusercontent.com/TheEnfrostedPower/SHU-THGWFJSKVEWAERSFCAWLWRFQWFEwraedfa-wfsrldawtkfwrkfaw-FSaFsafoeawfdskav-waf-waovasfafakgfds-gwaer/main/Ready_Or_Not.mp3?raw=true","Ready Or Not2")
+local ReplaceSeekSong = ReplaceGitAu("https://github.com/TheEnfrostedPower/SHU-THGWFJSKVEWAERSFCAWLWRFQWFEwraedfa-wfsrldawtkfwrkfaw-FSaFsafoeawfdskav-waf-waovasfafakgfds-gwaer/blob/main/Ready_Or_Not.mp3?raw=true","Ready Or Not2")
 workspace:FindFirstChild("Ambience_Seek").SoundId = ReplaceSeekSong
 game.Workspace.Ambience_Seek.TimePosition = 4
 game.Workspace.Ambience_Seek.Volume = 3
