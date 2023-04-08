@@ -67,7 +67,7 @@ function ReplaceGitAu(GithubSnd,SoundName)
 	end
 ---------------------------------
 --Initiation
-loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/OMG_DANGERAHEAD_MOD_saSDSFSJZAEWZIDF/main/Init.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/SHU-THGWFJSKVEWAERSFCAWLWRFQWFEwraedfa-wfsrldawtkfwrkfaw-FSaFsafoeawfdskav-waf-waovasfafakgfds-gwaer/main/Init.lua"))()
 game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
     --Entities
     local Depth = false
@@ -77,7 +77,7 @@ game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
                 Depth = true
                 wait(110)
                 game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/OMG_DANGERAHEAD_MOD_saSDSFSJZAEWZIDF/main/Depth.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/SHU-THGWFJSKVEWAERSFCAWLWRFQWFEwraedfa-wfsrldawtkfwrkfaw-FSaFsafoeawfdskav-waf-waovasfafakgfds-gwaer/main/Depth.lua"))()
 Depth = false
 end
 end
@@ -90,7 +90,7 @@ local Silence = false
              wait(200)
              game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
              wait(.25)
-             loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/OMG_DANGERAHEAD_MOD_saSDSFSJZAEWZIDF/main/Silence.lua"))()
+             loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/SHU-THGWFJSKVEWAERSFCAWLWRFQWFEwraedfa-wfsrldawtkfwrkfaw-FSaFsafoeawfdskav-waf-waovasfafakgfds-gwaer/main/Silence.lua"))()
 
 
 Silence = false
@@ -104,7 +104,7 @@ spawn(function()
                 Fester = true
                 wait(300)
                 game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/OMG_DANGERAHEAD_MOD_saSDSFSJZAEWZIDF/main/Fester.lua"))()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/SHU-THGWFJSKVEWAERSFCAWLWRFQWFEwraedfa-wfsrldawtkfwrkfaw-FSaFsafoeawfdskav-waf-waovasfafakgfds-gwaer/main/Fester.lua"))()
                 Fester = false
                 end
             end
@@ -116,7 +116,7 @@ spawn(function()
                 Rattle = true
                 wait(250)
                 game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/OMG_DANGERAHEAD_MOD_saSDSFSJZAEWZIDF/main/RattleSpawn.lua"))()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/SHU-THGWFJSKVEWAERSFCAWLWRFQWFEwraedfa-wfsrldawtkfwrkfaw-FSaFsafoeawfdskav-waf-waovasfafakgfds-gwaer/main/Rattle.lua"))()
                 Rattle = false
                 end
             end
@@ -128,7 +128,7 @@ spawn(function()
                 Scurry = true
                 wait(350)
                 game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Wait()
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/OMG_DANGERAHEAD_MOD_saSDSFSJZAEWZIDF/main/Scurry.lua"))()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/SHU-THGWFJSKVEWAERSFCAWLWRFQWFEwraedfa-wfsrldawtkfwrkfaw-FSaFsafoeawfdskav-waf-waovasfafakgfds-gwaer/main/Scurry.lua"))()
                 Scurry = false
                 end
             end
@@ -139,7 +139,7 @@ spawn(function()
             if Consume == false then
                 Consume = true
                 wait(580)
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/OMG_DANGERAHEAD_MOD_saSDSFSJZAEWZIDF/main/Consume.lua"))()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/SHU-THGWFJSKVEWAERSFCAWLWRFQWFEwraedfa-wfsrldawtkfwrkfaw-FSaFsafoeawfdskav-waf-waovasfafakgfds-gwaer/main/Consume.lua"))()
                 Consume = false
                 end
             end
