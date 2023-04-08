@@ -45,7 +45,7 @@ game.Workspace.Ambience.Hotel.Ambience_Hotel.SoundId = "rbxassetid://273398061"
 game.Workspace.Ambience.Hotel.Ambience_Hotel.Volume = 0.3
 game.Workspace.Ambience.Hotel.Ambience_Hotel.PlaybackSpeed = 1
 -- Settings
-game.Players.LocalPlayer.PlayerGui.MainUI.Statistics.Frame["Floors Escaped"].Text = "Floors Escaped (2)"
+game:GetService("Players").LocalPlayer.PlayerGui.MainUI.Statistics.Frame["Escaped Floor"].Visible = true
 
 --[[ Lighting Setup
 while task.wait(0.00005) do
