@@ -101,7 +101,7 @@ end
      room.Assets.Fireplace.Stone:Destroy()
      end
 wait(2)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/SHU-THGWFJSKVEWAERSFCAWLWRFQWFEwraedfa-wfsrldawtkfwrkfaw-FSaFsafoeawfdskav-waf-waovasfafakgfds-gwaer/main/Fester.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheEnfrostedPower/SHU-THGWFJSKVEWAERSFCAWLWRFQWFEwraedfa-wfsrldawtkfwrkfaw-FSaFsafoeawfdskav-waf-waovasfafakgfds-gwaer/main/DoorsShears.lua"))()
 -- Bright Game (90 and Above)
 if game.ReplicatedStorage.GameData.LatestRoom.Value > 90 then
 	if not _G.FullBrightExecuted then
